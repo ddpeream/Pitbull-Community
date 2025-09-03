@@ -1,0 +1,12 @@
+[
+	{ "id": 1, "nombre": "Rescate Paisa", "ciudad": "Medellín", "email": "contacto@rescatepaisa.org", "ig": "@rescatepaisa", "enfoque": "rescate" },
+	{ "id": 2, "nombre": "Club Buen Can", "ciudad": "Envigado", "email": "hola@clubbuenccan.co", "ig": "@clubbuenccan", "enfoque": "educacion" },
+	{ "id": 3, "nombre": "Deporte Canino AB", "ciudad": "Bello", "email": "deporte@caninoab.co", "ig": "@deportecaninoab", "enfoque": "deporte" },
+	{ "id": 4, "nombre": "Adopta con Amor", "ciudad": "Itagüí", "email": "info@adoptaamor.org", "ig": "@adoptaamor", "enfoque": "rescate" },
+	{ "id": 5, "nombre": "Escuela Positiva", "ciudad": "Medellín", "email": "equipo@escuelapositiva.co", "ig": "@escuelapositiva", "enfoque": "educacion" },
+	{ "id": 6, "nombre": "Red de Hogares", "ciudad": "Sabaneta", "email": "red@hogares.co", "ig": "@redhogares", "enfoque": "rescate" },
+	{ "id": 7, "nombre": "Pitbulls con Futuro", "ciudad": "Medellín", "email": "hola@pitbullsconfuturo.org", "ig": "@pitbullsconfuturo", "enfoque": "educacion" },
+	{ "id": 8, "nombre": "Canicross Antioquia", "ciudad": "Envigado", "email": "team@canicrossant.co", "ig": "@canicrossantioquia", "enfoque": "deporte" },
+	{ "id": 9, "nombre": "Manada Feliz", "ciudad": "La Estrella", "email": "contacto@manadafeliz.co", "ig": "@manadafeliz", "enfoque": "educacion" },
+	{ "id": 10, "nombre": "Patitas Unidas", "ciudad": "Bello", "email": "hola@patitasunidas.org", "ig": "@patitasunidas", "enfoque": "rescate" }
+]

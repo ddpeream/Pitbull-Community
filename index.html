@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Pitbull Community — Conoce, cuida y adopta responsablemente</title>
+	<meta name="description" content="Pitbull Community: información responsable, educación, bienestar y adopción de perros tipo Pitbull en Colombia.">
+	<meta name="theme-color" content="#0ea5e9">
+	<meta property="og:title" content="Pitbull Community">
+	<meta property="og:description" content="Conoce, cuida y adopta responsablemente.">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://example.com/">
+	<meta property="og:image" content="https://images.unsplash.com/photo-1534361960057-19889db9621e?w=1200&q=80&auto=format&fit=crop">
+	<meta name="twitter:card" content="summary_large_image">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+	<link rel="stylesheet" href="./assets/css/utilities.css">
+	<link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+<body>
+	<a class="skip-link" href="#contenido">Saltar al contenido</a>
+	<header class="site-header" role="banner">
+		<div class="container header-inner">
+			<a class="brand" href="./index.html" aria-label="Inicio Pitbull Community">
+				<span class="brand-logo" aria-hidden="true">🐶</span>
+				<span class="brand-text">Pitbull Community</span>
+			</a>
+			<button class="nav-toggle" aria-controls="nav" aria-expanded="false" aria-label="Abrir menú">
+				<i class="ri-menu-line" aria-hidden="true"></i>
+			</button>
+			<nav id="nav" class="site-nav" role="navigation" aria-label="Principal">
+				<ul>
+					<li><a class="nav-link" href="./index.html">Inicio</a></li>
+					<li><a class="nav-link" href="./pitbulls.html">Pitbulls</a></li>
+					<li><a class="nav-link" href="./comunidades.html">Comunidades</a></li>
+					<li><a class="nav-link" href="./lugares.html">Lugares</a></li>
+					<li><a class="nav-link" href="./galeria.html">Galería</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<main id="contenido" tabindex="-1">
+		<section class="hero container reveal">
+			<div class="hero-content">
+				<h1 class="hero-title">Conoce, cuida y adopta responsablemente</h1>
+				<p class="hero-subtitle">Información amable y moderna sobre perros tipo Pitbull en Colombia. Educación, bienestar y comunidad paisa y cosmopolita.</p>
+				<div class="hero-actions">
+					<a class="btn btn-primary" href="./pitbulls.html">
+						<i class="ri-search-line" aria-hidden="true"></i> Explorar Pitbulls
+					</a>
+					<a class="btn btn-ghost" href="./lugares.html">
+						<i class="ri-map-pin-line" aria-hidden="true"></i> Ver parches y vets
+					</a>
+				</div>
+			</div>
+			<figure class="hero-media">
+				<img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?w=1200&q=80&auto=format&fit=crop" alt="Perro tipo Pitbull mirando a la cámara" loading="eager" width="1200" height="800">
+			</figure>
+		</section>
+
+		<section class="container section reveal" aria-labelledby="aprende-title">
+			<h2 id="aprende-title" class="section-title">¿Qué aprenderás?</h2>
+			<div class="grid cards-3">
+				<article class="card">
+					<i class="ri-shield-check-line card-icon" aria-hidden="true"></i>
+					<h3>Mitos vs Hechos</h3>
+					<p>Desmontamos prejuicios y compartimos datos reales sobre comportamiento y bienestar.</p>
+				</article>
+				<article class="card">
+					<i class="ri-service-line card-icon" aria-hidden="true"></i>
+					<h3>Socialización positiva</h3>
+					<p>Herramientas prácticas para paseos, juego y entrenamiento amable.</p>
+				</article>
+				<article class="card">
+					<i class="ri-heart-3-line card-icon" aria-hidden="true"></i>
+					<h3>Salud y cuidados</h3>
+					<p>Vacunas, nutrición, ejercicio y señales de alerta para cuidar mejor.</p>
+				</article>
+			</div>
+		</section>
+
+		<section class="container section reveal" aria-labelledby="destacados-title">
+			<div class="section-head">
+				<h2 id="destacados-title" class="section-title">Destacados</h2>
+				<p class="muted">Una muestra de lo que encontrarás en la comunidad.</p>
+			</div>
+			<div class="featured">
+				<div>
+					<h3 class="subtle">Perros</h3>
+					<div id="destacados-perros" class="grid cards-3" role="list"></div>
+				</div>
+				<div>
+					<h3 class="subtle">Comunidades</h3>
+					<div id="destacados-comunidades" class="grid cards-3" role="list"></div>
+				</div>
+				<div>
+					<h3 class="subtle">Lugares</h3>
+					<div id="destacados-lugares" class="grid cards-3" role="list"></div>
+				</div>
+			</div>
+		</section>
+
+		<section class="container section reveal" aria-labelledby="newsletter-title">
+			<h2 id="newsletter-title" class="section-title">Suscríbete a nuestro boletín</h2>
+			<form id="newsletter-form" class="newsletter" action="#" method="post" novalidate>
+				<label class="visually-hidden" for="nl-email">Correo electrónico</label>
+				<input id="nl-email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="tu@correo.com" required aria-required="true">
+				<button class="btn btn-primary" type="submit">Quiero recibir novedades</button>
+				<p class="form-hint">Sin spam. Puedes darte de baja en cualquier momento.</p>
+			</form>
+		</section>
+	</main>
+
+	<footer class="site-footer" role="contentinfo">
+		<div class="container footer-inner">
+			<p>&copy; <span id="year"></span> Pitbull Community — Educación y adopción responsable.</p>
+			<nav aria-label="Secundario">
+				<a href="./comunidades.html">Tenencia responsable</a>
+				<a href="./galeria.html">Historias</a>
+			</nav>
+		</div>
+	</footer>
+
+	<script src="./assets/js/main.js" defer></script>
+	<script>
+		document.addEventListener("DOMContentLoaded", () => {
+			window.App && window.App.index && window.App.index();
+		});
+	</script>
+</body>
+</html>

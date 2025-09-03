@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Galería & Historias | Pitbull Community</title>
+	<meta name="description" content="Galería de fotos estilo masonry y crónicas de adopción y educación.">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+	<link rel="stylesheet" href="./assets/css/utilities.css">
+	<link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+<body>
+	<a class="skip-link" href="#contenido">Saltar al contenido</a>
+	<header class="site-header" role="banner">
+		<div class="container header-inner">
+			<a class="brand" href="./index.html"><span class="brand-logo" aria-hidden="true">🐶</span><span class="brand-text">Pitbull Community</span></a>
+			<button class="nav-toggle" aria-controls="nav" aria-expanded="false" aria-label="Abrir menú"><i class="ri-menu-line" aria-hidden="true"></i></button>
+			<nav id="nav" class="site-nav" role="navigation" aria-label="Principal">
+				<ul>
+					<li><a class="nav-link" href="./index.html">Inicio</a></li>
+					<li><a class="nav-link" href="./pitbulls.html">Pitbulls</a></li>
+					<li><a class="nav-link" href="./comunidades.html">Comunidades</a></li>
+					<li><a class="nav-link" href="./lugares.html">Lugares</a></li>
+					<li><a class="nav-link" href="./galeria.html" aria-current="page">Galería</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<main id="contenido" class="container section galeria-page" tabindex="-1">
+		<header class="page-head">
+			<h1 class="section-title">Galería & Historias</h1>
+			<p class="muted">Momentos felices, adopciones y comunidad.</p>
+			<div class="toolbar">
+				<label>
+					<span class="visually-hidden">Filtrar por etiqueta</span>
+					<select id="tag" name="tag">
+						<option value="">Todas</option>
+						<option value="adopciones">Adopciones</option>
+						<option value="entrenamiento">Entrenamiento</option>
+						<option value="comunidad">Comunidad</option>
+						<option value="eventos">Eventos</option>
+					</select>
+				</label>
+			</div>
+		</header>
+
+		<div class="gallery-layout">
+			<section class="masonry" aria-label="Galería de fotos" id="masonry" aria-live="polite"></section>
+			<aside class="stories" aria-label="Historias">
+				<ul id="stories-list" class="stories-list"></ul>
+			</aside>
+		</div>
+
+		<div id="lightbox" class="lightbox" hidden>
+			<button id="lb-close" class="icon-btn lb-close" aria-label="Cerrar" type="button"><i class="ri-close-line" aria-hidden="true"></i></button>
+			<figure class="lightbox-inner">
+				<img id="lb-img" src="" alt="" loading="eager">
+				<figcaption id="lb-cap" class="muted"></figcaption>
+			</figure>
+			<button id="lb-prev" class="icon-btn lb-prev" aria-label="Anterior" type="button"><i class="ri-arrow-left-line" aria-hidden="true"></i></button>
+			<button id="lb-next" class="icon-btn lb-next" aria-label="Siguiente" type="button"><i class="ri-arrow-right-line" aria-hidden="true"></i></button>
+		</div>
+	</main>
+
+	<footer class="site-footer" role="contentinfo">
+		<div class="container footer-inner">
+			<p>&copy; <span id="year"></span> Pitbull Community</p>
+		</div>
+	</footer>
+
+	<script src="./assets/js/main.js" defer></script>
+	<script src="./assets/js/galeria.js" defer></script>
+	<script>
+		document.addEventListener("DOMContentLoaded", () => {
+			window.App && window.App.galeria && window.App.galeria();
+		});
+	</script>
+</body>
+</html>

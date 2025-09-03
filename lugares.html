@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Lugares — Parques y Veterinarias | Pitbull Community</title>
+	<meta name="description" content="Parques caninos, veterinarias y tiendas pet. Carga de mapa bajo demanda con marcadores desde datos locales.">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+	<link rel="stylesheet" href="./assets/css/utilities.css">
+	<link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+<body>
+	<a class="skip-link" href="#contenido">Saltar al contenido</a>
+	<header class="site-header" role="banner">
+		<div class="container header-inner">
+			<a class="brand" href="./index.html"><span class="brand-logo" aria-hidden="true">🐶</span><span class="brand-text">Pitbull Community</span></a>
+			<button class="nav-toggle" aria-controls="nav" aria-expanded="false" aria-label="Abrir menú"><i class="ri-menu-line" aria-hidden="true"></i></button>
+			<nav id="nav" class="site-nav" role="navigation" aria-label="Principal">
+				<ul>
+					<li><a class="nav-link" href="./index.html">Inicio</a></li>
+					<li><a class="nav-link" href="./pitbulls.html">Pitbulls</a></li>
+					<li><a class="nav-link" href="./comunidades.html">Comunidades</a></li>
+					<li><a class="nav-link" href="./lugares.html" aria-current="page">Lugares</a></li>
+					<li><a class="nav-link" href="./galeria.html">Galería</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<main id="contenido" class="container section" tabindex="-1">
+		<header class="page-head">
+			<h1 class="section-title">Parques, Vets y Tiendas</h1>
+			<p class="muted">Explora el listado y abre el mapa cuando lo necesites.</p>
+		</header>
+
+		<form id="filtros-lug" class="toolbar" role="search" aria-label="Filtrar lugares">
+			<div class="toolbar-row">
+				<label>
+					<span class="lbl">Buscar</span>
+					<input type="search" id="q" name="q" placeholder="Nombre o ciudad…" autocomplete="off">
+				</label>
+				<label>
+					<span class="lbl">Tipo</span>
+					<select id="tipo" name="tipo">
+						<option value="">Todos</option>
+						<option value="parque">Parque</option>
+						<option value="vet">Veterinaria</option>
+						<option value="tienda">Tienda</option>
+					</select>
+				</label>
+				<label>
+					<span class="lbl">Ciudad</span>
+					<select id="ciudad" name="ciudad">
+						<option value="">Todas</option>
+					</select>
+				</label>
+				<div class="toolbar-spacer"></div>
+				<button id="abrir-mapa" class="btn btn-primary" type="button">
+					<i class="ri-map-2-line" aria-hidden="true"></i> Abrir mapa
+				</button>
+			</div>
+		</form>
+
+		<div class="lugares-layout">
+			<section class="listado" aria-label="Listado de lugares" aria-live="polite">
+				<ul id="lista-lugares" class="list" role="list"></ul>
+				<p id="sin-lugares" class="empty" hidden>No se encontraron lugares.</p>
+			</section>
+			<section class="mapa" aria-label="Mapa">
+				<div id="map" class="map" role="application" aria-roledescription="map" aria-label="Mapa interactivo" data-loaded="false">
+					<div class="map-placeholder">
+						<i class="ri-map-pin-2-line" aria-hidden="true"></i>
+						<p>El mapa se cargará cuando lo abras. Ahorra datos y mejora el rendimiento.</p>
+					</div>
+				</div>
+			</section>
+		</div>
+	</main>
+
+	<footer class="site-footer" role="contentinfo">
+		<div class="container footer-inner">
+			<p>&copy; <span id="year"></span> Pitbull Community</p>
+		</div>
+	</footer>
+
+	<script src="./assets/js/main.js" defer></script>
+	<script src="./assets/js/lugares.js" defer></script>
+	<script>
+		document.addEventListener("DOMContentLoaded", () => {
+			window.App && window.App.lugares && window.App.lugares();
+		});
+	</script>
+</body>
+</html>

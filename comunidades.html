@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Comunidades — Refugios y Clubes | Pitbull Community</title>
+	<meta name="description" content="Refugios, clubes y organizaciones enfocadas en rescate, educación y deporte. Datos de ejemplo.">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+	<link rel="stylesheet" href="./assets/css/utilities.css">
+	<link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+<body>
+	<a class="skip-link" href="#contenido">Saltar al contenido</a>
+	<header class="site-header" role="banner">
+		<div class="container header-inner">
+			<a class="brand" href="./index.html"><span class="brand-logo" aria-hidden="true">🐶</span><span class="brand-text">Pitbull Community</span></a>
+			<button class="nav-toggle" aria-controls="nav" aria-expanded="false" aria-label="Abrir menú"><i class="ri-menu-line" aria-hidden="true"></i></button>
+			<nav id="nav" class="site-nav" role="navigation" aria-label="Principal">
+				<ul>
+					<li><a class="nav-link" href="./index.html">Inicio</a></li>
+					<li><a class="nav-link" href="./pitbulls.html">Pitbulls</a></li>
+					<li><a class="nav-link" href="./comunidades.html" aria-current="page">Comunidades</a></li>
+					<li><a class="nav-link" href="./lugares.html">Lugares</a></li>
+					<li><a class="nav-link" href="./galeria.html">Galería</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<main id="contenido" class="container section" tabindex="-1">
+		<header class="page-head">
+			<h1 class="section-title">Refugios, Clubes y Comunidad</h1>
+			<p class="muted">Busca por ciudad o enfoque. Abre el detalle para contactos.</p>
+		</header>
+
+		<form id="filtros-com" class="toolbar" role="search" aria-label="Buscar comunidades">
+			<div class="toolbar-row">
+				<label>
+					<span class="lbl">Buscar</span>
+					<input type="search" id="q" name="q" placeholder="Nombre, ciudad o IG…" autocomplete="off">
+				</label>
+				<label>
+					<span class="lbl">Ciudad</span>
+					<select id="ciudad" name="ciudad">
+						<option value="">Todas</option>
+					</select>
+				</label>
+				<label>
+					<span class="lbl">Enfoque</span>
+					<select id="enfoque" name="enfoque">
+						<option value="">Todos</option>
+						<option value="rescate">Rescate</option>
+						<option value="educacion">Educación</option>
+						<option value="deporte">Deporte</option>
+					</select>
+				</label>
+			</div>
+		</form>
+
+		<section aria-live="polite" aria-busy="false">
+			<div id="grid-comunidades" class="grid cards-3" role="list"></div>
+			<p id="sin-comunidades" class="empty" hidden>No se encontraron comunidades.</p>
+		</section>
+
+		<aside class="guides">
+			<h2 class="subtle">Guías recomendadas</h2>
+			<ul class="links">
+				<li><a href="#" aria-label="Leer guía de tenencia responsable">Tenencia responsable</a></li>
+				<li><a href="#" aria-label="Leer guía de socialización positiva">Socialización positiva</a></li>
+			</ul>
+		</aside>
+
+		<dialog id="modal-comunidad" class="modal" aria-labelledby="com-titulo">
+			<form method="dialog" class="modal-inner">
+				<header class="modal-head">
+					<h2 id="com-titulo">Detalle de la comunidad</h2>
+					<button class="icon-btn" type="button" data-close aria-label="Cerrar"><i class="ri-close-line" aria-hidden="true"></i></button>
+				</header>
+				<div id="com-contenido" class="modal-content"></div>
+			</form>
+		</dialog>
+	</main>
+
+	<footer class="site-footer" role="contentinfo">
+		<div class="container footer-inner">
+			<p>&copy; <span id="year"></span> Pitbull Community</p>
+		</div>
+	</footer>
+
+	<script src="./assets/js/main.js" defer></script>
+	<script src="./assets/js/comunidades.js" defer></script>
+	<script>
+		document.addEventListener("DOMContentLoaded", () => {
+			window.App && window.App.comunidades && window.App.comunidades();
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+[
+	{ "id": 1, "nombre": "Parque Canino Sabaneta", "lat": 6.151, "lng": -75.616, "tipo": "parque", "ciudad": "Área Metropolitana", "descripcion": "Zona amplia y segura." },
+	{ "id": 2, "nombre": "Vet La 10", "lat": 6.208, "lng": -75.567, "tipo": "vet", "ciudad": "Medellín", "descripcion": "Atención 24/7." },
+	{ "id": 3, "nombre": "Tienda Pet Envigado", "lat": 6.171, "lng": -75.586, "tipo": "tienda", "ciudad": "Envigado", "descripcion": "Accesorios y snacks." },
+	{ "id": 4, "nombre": "Parque de la Bailarina", "lat": 6.204, "lng": -75.564, "tipo": "parque", "ciudad": "Medellín", "descripcion": "Punto de encuentro canino." },
+	{ "id": 5, "nombre": "Vet Itagüí Centro", "lat": 6.171, "lng": -75.606, "tipo": "vet", "ciudad": "Itagüí", "descripcion": "Servicios completos." },
+	{ "id": 6, "nombre": "Parque Bello Norte", "lat": 6.343, "lng": -75.558, "tipo": "parque", "ciudad": "Bello", "descripcion": "Sombras y agua." },
+	{ "id": 7, "nombre": "Pet Market Laureles", "lat": 6.246, "lng": -75.588, "tipo": "tienda", "ciudad": "Medellín", "descripcion": "Productos premium." },
+	{ "id": 8, "nombre": "Parque Lineal La Estrella", "lat": 6.157, "lng": -75.643, "tipo": "parque", "ciudad": "La Estrella", "descripcion": "Verde y tranquilo." },
+	{ "id": 9, "nombre": "Vet Plus Sabaneta", "lat": 6.153, "lng": -75.618, "tipo": "vet", "ciudad": "Sabaneta", "descripcion": "Especialistas." },
+	{ "id": 10, "nombre": "Pet Store Poblado", "lat": 6.203, "lng": -75.567, "tipo": "tienda", "ciudad": "Medellín", "descripcion": "Variedad y servicio." },
+	{ "id": 11, "nombre": "Parque Envigado Sur", "lat": 6.161, "lng": -75.591, "tipo": "parque", "ciudad": "Envigado", "descripcion": "Caminos y zonas verdes." },
+	{ "id": 12, "nombre": "Vet Bello Centro", "lat": 6.334, "lng": -75.556, "tipo": "vet", "ciudad": "Bello", "descripcion": "Buena atención." },
+	{ "id": 13, "nombre": "Parque Ciudad del Río", "lat": 6.227, "lng": -75.574, "tipo": "parque", "ciudad": "Medellín", "descripcion": "Espacios abiertos." },
+	{ "id": 14, "nombre": "Pet Shop Itagüí", "lat": 6.173, "lng": -75.606, "tipo": "tienda", "ciudad": "Itagüí", "descripcion": "Juguetes y alimentos." }
+]

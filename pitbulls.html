@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Pitbulls — Explorador | Pitbull Community</title>
+	<meta name="description" content="Explora perros tipo Pitbull para adopción o educación. Filtra por edad, sexo, tamaño, compatibilidad y ciudad.">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+	<link rel="stylesheet" href="./assets/css/utilities.css">
+	<link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+<body>
+	<a class="skip-link" href="#contenido">Saltar al contenido</a>
+	<header class="site-header" role="banner">
+		<div class="container header-inner">
+			<a class="brand" href="./index.html"><span class="brand-logo" aria-hidden="true">🐶</span><span class="brand-text">Pitbull Community</span></a>
+			<button class="nav-toggle" aria-controls="nav" aria-expanded="false" aria-label="Abrir menú"><i class="ri-menu-line" aria-hidden="true"></i></button>
+			<nav id="nav" class="site-nav" role="navigation" aria-label="Principal">
+				<ul>
+					<li><a class="nav-link" href="./index.html">Inicio</a></li>
+					<li><a class="nav-link" href="./pitbulls.html" aria-current="page">Pitbulls</a></li>
+					<li><a class="nav-link" href="./comunidades.html">Comunidades</a></li>
+					<li><a class="nav-link" href="./lugares.html">Lugares</a></li>
+					<li><a class="nav-link" href="./galeria.html">Galería</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<main id="contenido" class="container section" tabindex="-1">
+		<header class="page-head">
+			<h1 class="section-title">Explorador de Pitbulls</h1>
+			<p class="muted">Filtra y encuentra perros para adopción o educación. Datos de ejemplo.</p>
+		</header>
+
+		<form id="filtros" class="toolbar" role="search" aria-label="Filtros del explorador">
+			<div class="toolbar-row">
+				<label>
+					<span class="lbl">Buscar</span>
+					<input type="search" id="q" name="q" placeholder="Nombre, ciudad o etiqueta…" autocomplete="off">
+				</label>
+				<label>
+					<span class="lbl">Edad</span>
+					<select id="edad" name="edad">
+						<option value="">Todas</option>
+						<option value="cachorro">Cachorro</option>
+						<option value="adulto">Adulto</option>
+						<option value="senior">Senior</option>
+					</select>
+				</label>
+				<label>
+					<span class="lbl">Sexo</span>
+					<select id="sexo" name="sexo">
+						<option value="">Todos</option>
+						<option value="hembra">Hembra</option>
+						<option value="macho">Macho</option>
+					</select>
+				</label>
+				<label>
+					<span class="lbl">Tamaño</span>
+					<select id="tamano" name="tamano">
+						<option value="">Todos</option>
+						<option value="pequeno">Pequeño</option>
+						<option value="mediano">Mediano</option>
+						<option value="grande">Grande</option>
+					</select>
+				</label>
+				<label>
+					<span class="lbl">Compatibilidad</span>
+					<select id="compat" name="compat">
+						<option value="">Cualquiera</option>
+						<option value="niños">Niños</option>
+						<option value="perros">Otros perros</option>
+					</select>
+				</label>
+				<label>
+					<span class="lbl">Estado</span>
+					<select id="estado" name="estado">
+						<option value="">Todos</option>
+						<option value="adopcion">Adopción</option>
+						<option value="educacion">Educación</option>
+					</select>
+				</label>
+				<label>
+					<span class="lbl">Ordenar por</span>
+					<select id="orden" name="orden">
+						<option value="recientes">Recientes</option>
+						<option value="compatibilidad">Compatibilidad</option>
+					</select>
+				</label>
+			</div>
+		</form>
+
+		<section aria-live="polite" aria-busy="false">
+			<div id="resultados" class="grid cards-3" role="list"></div>
+			<div class="actions center">
+				<button id="cargar-mas" class="btn btn-ghost" type="button">Cargar más</button>
+			</div>
+			<p id="sin-resultados" class="empty" hidden>No se encontraron resultados con esos filtros.</p>
+		</section>
+
+		<dialog id="modal-ficha" class="modal" aria-labelledby="ficha-titulo">
+			<form method="dialog" class="modal-inner">
+				<header class="modal-head">
+					<h2 id="ficha-titulo">Ficha del perro</h2>
+					  <button class="icon-btn" type="button" aria-label="Cerrar"><i class="ri-close-line" aria-hidden="true"></i></button>
+				</header>
+				<div id="ficha-contenido" class="modal-content"></div>
+			</form>
+		</dialog>
+	</main>
+
+	<footer class="site-footer" role="contentinfo">
+		<div class="container footer-inner">
+			<p>&copy; <span id="year"></span> Pitbull Community</p>
+		</div>
+	</footer>
+
+	<script src="./assets/js/main.js" defer></script>
+	<script src="./assets/js/pitbulls.js" defer></script>
+	<script>
+		document.addEventListener("DOMContentLoaded", () => {
+			window.App && window.App.pitbulls && window.App.pitbulls();
+		});
+	</script>
+</body>
+</html>
