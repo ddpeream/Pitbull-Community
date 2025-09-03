@@ -38,63 +38,63 @@
 
 	<main id="contenido" class="container section" tabindex="-1">
 		<header class="page-head">
-			<h1 class="section-title">Explorador de Pitbulls</h1>
-			<p class="muted">Filtra y encuentra perros para adopción o educación. Datos de ejemplo.</p>
+			<h1 class="section-title" data-translate="pitbulls_title">Explorador de Pitbulls</h1>
+			<p class="muted" data-translate="pitbulls_subtitle">Filtra y encuentra perros para adopción o educación. Datos de ejemplo.</p>
 		</header>
 
 		<form id="filtros" class="toolbar" role="search" aria-label="Filtros del explorador">
 			<div class="toolbar-row">
 				<label>
-					<span class="lbl">Buscar</span>
-					<input type="search" id="q" name="q" placeholder="Nombre, ciudad o etiqueta…" autocomplete="off">
+					<span class="lbl" data-translate="pitbulls_search_label">Buscar</span>
+					<input type="search" id="q" name="q" data-translate-placeholder="pitbulls_search_placeholder" placeholder="Nombre, ciudad o etiqueta…" autocomplete="off">
 				</label>
 				<label>
-					<span class="lbl">Edad</span>
+					<span class="lbl" data-translate="pitbulls_age_label">Edad</span>
 					<select id="edad" name="edad">
-						<option value="">Todas</option>
-						<option value="cachorro">Cachorro</option>
-						<option value="adulto">Adulto</option>
-						<option value="senior">Senior</option>
+						<option value="" data-translate="pitbulls_all_ages">Todas</option>
+						<option value="cachorro" data-translate="pitbulls_age_puppy">Cachorro</option>
+						<option value="adulto" data-translate="pitbulls_age_adult">Adulto</option>
+						<option value="senior" data-translate="pitbulls_age_senior">Senior</option>
 					</select>
 				</label>
 				<label>
-					<span class="lbl">Sexo</span>
+					<span class="lbl" data-translate="pitbulls_gender_label">Sexo</span>
 					<select id="sexo" name="sexo">
-						<option value="">Todos</option>
-						<option value="hembra">Hembra</option>
-						<option value="macho">Macho</option>
+						<option value="" data-translate="pitbulls_all_genders">Todos</option>
+						<option value="hembra" data-translate="pitbulls_gender_female">Hembra</option>
+						<option value="macho" data-translate="pitbulls_gender_male">Macho</option>
 					</select>
 				</label>
 				<label>
-					<span class="lbl">Tamaño</span>
+					<span class="lbl" data-translate="pitbulls_size_label">Tamaño</span>
 					<select id="tamano" name="tamano">
-						<option value="">Todos</option>
-						<option value="pequeno">Pequeño</option>
-						<option value="mediano">Mediano</option>
-						<option value="grande">Grande</option>
+						<option value="" data-translate="pitbulls_all_sizes">Todos</option>
+						<option value="pequeno" data-translate="pitbulls_size_small">Pequeño</option>
+						<option value="mediano" data-translate="pitbulls_size_medium">Mediano</option>
+						<option value="grande" data-translate="pitbulls_size_large">Grande</option>
 					</select>
 				</label>
 				<label>
-					<span class="lbl">Compatibilidad</span>
+					<span class="lbl" data-translate="pitbulls_compatibility_label">Compatibilidad</span>
 					<select id="compat" name="compat">
-						<option value="">Cualquiera</option>
-						<option value="niños">Niños</option>
-						<option value="perros">Otros perros</option>
+						<option value="" data-translate="pitbulls_any_compatibility">Cualquiera</option>
+						<option value="niños" data-translate="pitbulls_compatibility_children">Niños</option>
+						<option value="perros" data-translate="pitbulls_compatibility_dogs">Otros perros</option>
 					</select>
 				</label>
 				<label>
-					<span class="lbl">Estado</span>
+					<span class="lbl" data-translate="pitbulls_status_label">Estado</span>
 					<select id="estado" name="estado">
-						<option value="">Todos</option>
-						<option value="adopcion">Adopción</option>
-						<option value="educacion">Educación</option>
+						<option value="" data-translate="pitbulls_all_statuses">Todos</option>
+						<option value="adopcion" data-translate="pitbulls_status_adoption">Adopción</option>
+						<option value="educacion" data-translate="pitbulls_status_education">Educación</option>
 					</select>
 				</label>
 				<label>
-					<span class="lbl">Ordenar por</span>
+					<span class="lbl" data-translate="pitbulls_sort_label">Ordenar por</span>
 					<select id="orden" name="orden">
-						<option value="recientes">Recientes</option>
-						<option value="compatibilidad">Compatibilidad</option>
+						<option value="recientes" data-translate="pitbulls_sort_recent">Recientes</option>
+						<option value="compatibilidad" data-translate="pitbulls_sort_compatibility">Compatibilidad</option>
 					</select>
 				</label>
 			</div>
@@ -103,15 +103,15 @@
 		<section aria-live="polite" aria-busy="false">
 			<div id="resultados" class="grid cards-3" role="list"></div>
 			<div class="actions center">
-				<button id="cargar-mas" class="btn btn-ghost" type="button">Cargar más</button>
+				<button id="cargar-mas" class="btn btn-ghost" type="button" data-translate="pitbulls_load_more">Cargar más</button>
 			</div>
-			<p id="sin-resultados" class="empty" hidden>No se encontraron resultados con esos filtros.</p>
+			<p id="sin-resultados" class="empty" hidden data-translate="pitbulls_no_results">No se encontraron resultados con esos filtros.</p>
 		</section>
 
 		<dialog id="modal-ficha" class="modal" aria-labelledby="ficha-titulo">
 			<form method="dialog" class="modal-inner">
 				<header class="modal-head">
-					<h2 id="ficha-titulo">Ficha del perro</h2>
+					<h2 id="ficha-titulo" data-translate="pitbulls_dog_profile">Ficha del perro</h2>
 					  <button class="icon-btn" type="button" aria-label="Cerrar"><i class="ri-close-line" aria-hidden="true"></i></button>
 				</header>
 				<div id="ficha-contenido" class="modal-content"></div>
@@ -126,6 +126,7 @@
 	</footer>
 
 	<script src="./assets/js/i18n.js"></script>
+	<script src="./assets/js/translations.js"></script>
 	<script src="./assets/js/main.js"></script>
 	<script src="./assets/js/pitbulls.js"></script>
 	<script>

@@ -17,20 +17,20 @@
 	<header class="site-header" role="banner">
 		<div class="container header-inner">
 			<a class="brand" href="./index.html"><span class="brand-logo" aria-hidden="true">🐶</span><span class="brand-text">Pitbull Community</span></a>
-			<select id="language-selector" class="language-selector" aria-label="Seleccionar idioma">
-				<option value="es">🇪🇸 ES</option>
-				<option value="en">🇺🇸 EN</option>
-				<option value="de">🇩🇪 DE</option>
-				<option value="zh">🇹🇼 中文</option>
-			</select>
+			<div class="language-selector">
+				<button class="lang-btn active" data-lang="es" onclick="changeLanguage('es')">🇪🇸 ES</button>
+				<button class="lang-btn" data-lang="en" onclick="changeLanguage('en')">🇺🇸 EN</button>
+				<button class="lang-btn" data-lang="de" onclick="changeLanguage('de')">🇩🇪 DE</button>
+				<button class="lang-btn" data-lang="zh" onclick="changeLanguage('zh')">🇹🇼 中文</button>
+			</div>
 			<button class="nav-toggle" aria-controls="nav" aria-expanded="false" aria-label="Abrir menú"><i class="ri-menu-line" aria-hidden="true"></i></button>
 			<nav id="nav" class="site-nav" role="navigation" aria-label="Principal">
 				<ul>
-					<li><a class="nav-link" href="./index.html" data-i18n="nav.home">Inicio</a></li>
-					<li><a class="nav-link" href="./pitbulls.html" data-i18n="nav.pitbulls">Pitbulls</a></li>
-					<li><a class="nav-link" href="./comunidades.html" data-i18n="nav.communities">Comunidades</a></li>
-					<li><a class="nav-link" href="./lugares.html" data-i18n="nav.places">Lugares</a></li>
-					<li><a class="nav-link" href="./galeria.html" data-i18n="nav.gallery" aria-current="page">Galería</a></li>
+					<li><a class="nav-link" href="./index.html" data-translate="nav_home">Inicio</a></li>
+					<li><a class="nav-link" href="./pitbulls.html" data-translate="nav_pitbulls">Pitbulls</a></li>
+					<li><a class="nav-link" href="./comunidades.html" data-translate="nav_communities">Comunidades</a></li>
+					<li><a class="nav-link" href="./lugares.html" data-translate="nav_places">Lugares</a></li>
+					<li><a class="nav-link" href="./galeria.html" data-translate="nav_gallery" aria-current="page">Galería</a></li>
 				</ul>
 			</nav>
 		</div>
@@ -38,16 +38,16 @@
 
 	<main id="contenido" class="container section galeria-page" tabindex="-1">
 		<header class="page-head">
-			<h1 class="section-title">Galería & Historias</h1>
-			<p class="muted">Momentos felices, adopciones y comunidad.</p>
+			<h1 class="section-title" data-translate="gallery_title">Galería & Historias</h1>
+			<p class="muted" data-translate="gallery_subtitle">Momentos felices, adopciones y comunidad.</p>
 			<div class="toolbar">
 				<label>
-					<span class="visually-hidden">Filtrar por etiqueta</span>
+					<span class="visually-hidden" data-translate="gallery_filter_label">Filtrar por etiqueta</span>
 					<select id="tag" name="tag">
-						<option value="">Todas</option>
-						<option value="adopciones">Adopciones</option>
-						<option value="entrenamiento">Entrenamiento</option>
-						<option value="comunidad">Comunidad</option>
+						<option value="" data-translate="gallery_all_tags">Todas</option>
+						<option value="adopciones" data-translate="gallery_tag_adoptions">Adopciones</option>
+						<option value="entrenamiento" data-translate="gallery_tag_training">Entrenamiento</option>
+						<option value="comunidad" data-translate="gallery_tag_community">Comunidad</option>
 						<option value="eventos">Eventos</option>
 					</select>
 				</label>
@@ -78,7 +78,7 @@
 		</div>
 	</footer>
 
-	<script src="./assets/js/i18n.js"></script>
+	<script src="./assets/js/translations.js"></script>
 	<script src="./assets/js/main.js"></script>
 	<script src="./assets/js/galeria.js"></script>
 	<script>

@@ -17,20 +17,20 @@
 	<header class="site-header" role="banner">
 		<div class="container header-inner">
 			<a class="brand" href="./index.html"><span class="brand-logo" aria-hidden="true">🐶</span><span class="brand-text">Pitbull Community</span></a>
-			<select id="language-selector" class="language-selector" aria-label="Seleccionar idioma">
-				<option value="es">🇪🇸 ES</option>
-				<option value="en">🇺🇸 EN</option>
-				<option value="de">🇩🇪 DE</option>
-				<option value="zh">🇹🇼 中文</option>
-			</select>
+			<div class="language-selector">
+				<button class="lang-btn active" data-lang="es" onclick="changeLanguage('es')">🇪🇸 ES</button>
+				<button class="lang-btn" data-lang="en" onclick="changeLanguage('en')">🇺🇸 EN</button>
+				<button class="lang-btn" data-lang="de" onclick="changeLanguage('de')">🇩🇪 DE</button>
+				<button class="lang-btn" data-lang="zh" onclick="changeLanguage('zh')">🇹🇼 中文</button>
+			</div>
 			<button class="nav-toggle" aria-controls="nav" aria-expanded="false" aria-label="Abrir menú"><i class="ri-menu-line" aria-hidden="true"></i></button>
 			<nav id="nav" class="site-nav" role="navigation" aria-label="Principal">
 				<ul>
-					<li><a class="nav-link" href="./index.html" data-i18n="nav.home">Inicio</a></li>
-					<li><a class="nav-link" href="./pitbulls.html" data-i18n="nav.pitbulls">Pitbulls</a></li>
-					<li><a class="nav-link" href="./comunidades.html" data-i18n="nav.communities" aria-current="page">Comunidades</a></li>
-					<li><a class="nav-link" href="./lugares.html" data-i18n="nav.places">Lugares</a></li>
-					<li><a class="nav-link" href="./galeria.html" data-i18n="nav.gallery">Galería</a></li>
+					<li><a class="nav-link" href="./index.html" data-translate="nav_home">Inicio</a></li>
+					<li><a class="nav-link" href="./pitbulls.html" data-translate="nav_pitbulls">Pitbulls</a></li>
+					<li><a class="nav-link" href="./comunidades.html" data-translate="nav_communities" aria-current="page">Comunidades</a></li>
+					<li><a class="nav-link" href="./lugares.html" data-translate="nav_places">Lugares</a></li>
+					<li><a class="nav-link" href="./galeria.html" data-translate="nav_gallery">Galería</a></li>
 				</ul>
 			</nav>
 		</div>
@@ -38,29 +38,29 @@
 
 	<main id="contenido" class="container section" tabindex="-1">
 		<header class="page-head">
-			<h1 class="section-title">Refugios, Clubes y Comunidad</h1>
-			<p class="muted">Busca por ciudad o enfoque. Abre el detalle para contactos.</p>
+			<h1 class="section-title" data-translate="communities_title">Refugios, Clubes y Comunidad</h1>
+			<p class="muted" data-translate="communities_subtitle">Busca por ciudad o enfoque. Abre el detalle para contactos.</p>
 		</header>
 
 		<form id="filtros-com" class="toolbar" role="search" aria-label="Buscar comunidades">
 			<div class="toolbar-row">
 				<label>
-					<span class="lbl">Buscar</span>
-					<input type="search" id="q" name="q" placeholder="Nombre, ciudad o IG…" autocomplete="off">
+					<span class="lbl" data-translate="communities_search_label">Buscar</span>
+					<input type="search" id="q" name="q" data-translate-placeholder="communities_search_placeholder" placeholder="Nombre, ciudad o IG…" autocomplete="off">
 				</label>
 				<label>
-					<span class="lbl">Ciudad</span>
+					<span class="lbl" data-translate="communities_city_label">Ciudad</span>
 					<select id="ciudad" name="ciudad">
-						<option value="">Todas</option>
+						<option value="" data-translate="communities_all_cities">Todas</option>
 					</select>
 				</label>
 				<label>
-					<span class="lbl">Enfoque</span>
+					<span class="lbl" data-translate="communities_focus_label">Enfoque</span>
 					<select id="enfoque" name="enfoque">
-						<option value="">Todos</option>
-						<option value="rescate">Rescate</option>
-						<option value="educacion">Educación</option>
-						<option value="deporte">Deporte</option>
+						<option value="" data-translate="communities_all_focuses">Todos</option>
+						<option value="rescate" data-translate="communities_focus_rescue">Rescate</option>
+						<option value="educacion" data-translate="communities_focus_education">Educación</option>
+						<option value="deporte" data-translate="communities_focus_sport">Deporte</option>
 					</select>
 				</label>
 			</div>
@@ -68,21 +68,21 @@
 
 		<section aria-live="polite" aria-busy="false">
 			<div id="grid-comunidades" class="grid cards-3" role="list"></div>
-			<p id="sin-comunidades" class="empty" hidden>No se encontraron comunidades.</p>
+			<p id="sin-comunidades" class="empty" hidden data-translate="communities_no_results">No se encontraron comunidades.</p>
 		</section>
 
 		<aside class="guides">
-			<h2 class="subtle">Guías recomendadas</h2>
+			<h2 class="subtle" data-translate="communities_guides_title">Guías recomendadas</h2>
 			<ul class="links">
-				<li><a href="#" aria-label="Leer guía de tenencia responsable">Tenencia responsable</a></li>
-				<li><a href="#" aria-label="Leer guía de socialización positiva">Socialización positiva</a></li>
+				<li><a href="#" aria-label="Leer guía de tenencia responsable" data-translate="communities_guide1">Tenencia responsable</a></li>
+				<li><a href="#" aria-label="Leer guía de socialización positiva" data-translate="communities_guide2">Socialización positiva</a></li>
 			</ul>
 		</aside>
 
 		<dialog id="modal-comunidad" class="modal" aria-labelledby="com-titulo">
 			<form method="dialog" class="modal-inner">
 				<header class="modal-head">
-					<h2 id="com-titulo">Detalle de la comunidad</h2>
+					<h2 id="com-titulo" data-translate="communities_modal_title">Detalle de la comunidad</h2>
 					<button class="icon-btn" type="button" data-close aria-label="Cerrar"><i class="ri-close-line" aria-hidden="true"></i></button>
 				</header>
 				<div id="com-contenido" class="modal-content"></div>
@@ -96,7 +96,7 @@
 		</div>
 	</footer>
 
-	<script src="./assets/js/i18n.js"></script>
+	<script src="./assets/js/translations.js"></script>
 	<script src="./assets/js/main.js"></script>
 	<script src="./assets/js/comunidades.js"></script>
 	<script>
