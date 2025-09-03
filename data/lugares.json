@@ -12,5 +12,6 @@
 	{ "id": 11, "nombre": "Parque Envigado Sur", "lat": 6.161, "lng": -75.591, "tipo": "parque", "ciudad": "Envigado", "descripcion": "Caminos y zonas verdes." },
 	{ "id": 12, "nombre": "Vet Bello Centro", "lat": 6.334, "lng": -75.556, "tipo": "vet", "ciudad": "Bello", "descripcion": "Buena atención." },
 	{ "id": 13, "nombre": "Parque Ciudad del Río", "lat": 6.227, "lng": -75.574, "tipo": "parque", "ciudad": "Medellín", "descripcion": "Espacios abiertos." },
-	{ "id": 14, "nombre": "Pet Shop Itagüí", "lat": 6.173, "lng": -75.606, "tipo": "tienda", "ciudad": "Itagüí", "descripcion": "Juguetes y alimentos." }
+	{ "id": 14, "nombre": "Pet Shop Itagüí", "lat": 6.173, "lng": -75.606, "tipo": "tienda", "ciudad": "Itagüí", "descripcion": "Juguetes y alimentos." },
+	{ "id": 15, "nombre": "Parque Lineal López de Mesa", "lat": 6.234, "lng": -75.606, "tipo": "parque", "ciudad": "Medellín", "descripcion": "Sendero verde ideal para caminatas con mascotas, con áreas de descanso y sombra." }
 ]

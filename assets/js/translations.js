@@ -127,6 +127,20 @@ const translations = {
         search: "Buscar",
         filter: "Filtrar",
         all: "Todos",
+        
+        // Health information
+        health: "Salud",
+        vaccines_up_to_date: "Vacunas al día",
+        dewormed: "Desparasitado",
+        sterilized: "Esterilizado",
+        notes: "Notas",
+        pending_verification: "Pendiente de verificación",
+        no_description_available: "Sin descripción disponible",
+        view_profile: "Ver perfil",
+        age: "Edad",
+        gender: "Sexo",
+        size: "Tamaño",
+        compatibility: "Compatibilidad",
 
         // Language names
         lang_spanish: "Español",
@@ -261,6 +275,20 @@ const translations = {
         search: "Search",
         filter: "Filter",
         all: "All",
+        
+        // Health information
+        health: "Health",
+        vaccines_up_to_date: "Vaccines up to date",
+        dewormed: "Dewormed",
+        sterilized: "Sterilized",
+        notes: "Notes",
+        pending_verification: "Pending verification",
+        no_description_available: "No description available",
+        view_profile: "View profile",
+        age: "Age",
+        gender: "Gender",
+        size: "Size",
+        compatibility: "Compatibility",
 
         // Language names
         lang_spanish: "Spanish",
@@ -395,6 +423,20 @@ const translations = {
         search: "Suchen",
         filter: "Filter",
         all: "Alle",
+        
+        // Health information
+        health: "Gesundheit",
+        vaccines_up_to_date: "Impfungen aktuell",
+        dewormed: "Entwurmt",
+        sterilized: "Sterilisiert",
+        notes: "Notizen",
+        pending_verification: "Ausstehende Überprüfung",
+        no_description_available: "Keine Beschreibung verfügbar",
+        view_profile: "Profil anzeigen",
+        age: "Alter",
+        gender: "Geschlecht",
+        size: "Größe",
+        compatibility: "Kompatibilität",
 
         // Language names
         lang_spanish: "Spanisch",
@@ -529,6 +571,20 @@ const translations = {
         search: "搜索",
         filter: "过滤",
         all: "全部",
+        
+        // Health information
+        health: "健康",
+        vaccines_up_to_date: "疫苗接种最新",
+        dewormed: "已驱虫",
+        sterilized: "已绝育",
+        notes: "备注",
+        pending_verification: "待验证",
+        no_description_available: "暂无描述",
+        view_profile: "查看档案",
+        age: "年龄",
+        gender: "性别",
+        size: "体型",
+        compatibility: "兼容性",
 
         // Language names
         lang_spanish: "西班牙语",
