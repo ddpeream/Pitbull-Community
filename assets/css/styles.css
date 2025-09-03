@@ -122,6 +122,275 @@ body { background: radial-gradient(1200px 800px at 10% -10%, rgba(14,165,233,.18
   color: white;
 }
 
+/* Creators Section */
+.creators-section {
+	background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+	color: white;
+	padding: 4rem 0;
+	position: relative;
+	overflow: hidden;
+}
+
+.creators-section::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="stars" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="0.5" fill="rgba(255,255,255,0.1)"/><circle cx="12" cy="8" r="0.3" fill="rgba(255,255,255,0.05)"/><circle cx="7" cy="15" r="0.4" fill="rgba(255,255,255,0.08)"/></pattern></defs><rect width="100" height="100" fill="url(%23stars)"/></svg>') repeat;
+	opacity: 0.3;
+}
+
+.creators-content {
+	text-align: center;
+	position: relative;
+	z-index: 1;
+}
+
+.creators-title {
+	font-family: var(--font-heading);
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-bottom: 3rem;
+	background: linear-gradient(45deg, #ffd700, #ff6b6b, #4ecdc4);
+	background-size: 200% 200%;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+	animation: gradientShift 3s ease-in-out infinite;
+}
+
+@keyframes gradientShift {
+	0%, 100% { background-position: 0% 50%; }
+	50% { background-position: 100% 50%; }
+}
+
+.creators-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	gap: 2rem;
+	margin-bottom: 3rem;
+	max-width: 900px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.creator-card {
+	background: rgba(255, 255, 255, 0.1);
+	-webkit-backdrop-filter: blur(10px);
+	backdrop-filter: blur(10px);
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	border-radius: 20px;
+	padding: 2rem;
+	text-align: center;
+	transition: all 0.3s ease;
+	position: relative;
+	overflow: hidden;
+}
+
+.creator-card::before {
+	content: '';
+	position: absolute;
+	top: -50%;
+	left: -50%;
+	width: 200%;
+	height: 200%;
+	background: conic-gradient(transparent, rgba(255, 255, 255, 0.1), transparent);
+	animation: rotate 4s linear infinite;
+	z-index: -1;
+}
+
+@keyframes rotate {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+}
+
+.creator-card:hover {
+	transform: translateY(-10px);
+	box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+	border-color: rgba(255, 255, 255, 0.4);
+}
+
+.creator-initial {
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 2rem;
+	font-weight: 700;
+	margin: 0 auto 1.5rem;
+	color: white;
+	position: relative;
+	z-index: 1;
+}
+
+/* Creator Avatar Styles */
+.creator-avatar {
+	width: 120px;
+	height: 120px;
+	margin: 0 auto 1.5rem;
+	position: relative;
+	border-radius: 50%;
+	overflow: hidden;
+	background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+	box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+	transition: all 0.3s ease;
+}
+
+.creator-avatar:hover {
+	transform: scale(1.05);
+	box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+.creator-photo {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 50%;
+	position: relative;
+	z-index: 2;
+}
+
+/* Ajuste específico para la foto de Deimar */
+.creator-avatar img[alt="Deimar Perea"] {
+	object-position: center 30%;
+}
+
+.creator-initial-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.7);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 2.5rem;
+	font-weight: 700;
+	color: white;
+	opacity: 0;
+	transition: opacity 0.3s ease;
+	z-index: 3;
+	border-radius: 50%;
+}
+
+.creator-avatar:hover .creator-initial-overlay {
+	opacity: 1;
+}
+
+.placeholder-avatar {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	background: linear-gradient(135deg, #6c757d, #495057);
+	position: relative;
+}
+
+.placeholder-avatar .creator-initial {
+	width: auto;
+	height: auto;
+	background: none;
+	margin: 0;
+	font-size: 3rem;
+	margin-bottom: 0.5rem;
+}
+
+.photo-coming-soon {
+	font-size: 0.75rem;
+	color: rgba(255, 255, 255, 0.8);
+	text-align: center;
+	font-style: italic;
+	position: absolute;
+	bottom: 8px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 90%;
+}
+
+.creator-name {
+	font-size: 1.5rem;
+	font-weight: 600;
+	margin-bottom: 0.5rem;
+	color: white;
+}
+
+.creator-role {
+	color: rgba(255, 255, 255, 0.8);
+	font-size: 1rem;
+	font-style: italic;
+}
+
+.creators-motto {
+	font-size: 1.125rem;
+	font-style: italic;
+	color: rgba(255, 255, 255, 0.9);
+	max-width: 600px;
+	margin: 0 auto;
+	line-height: 1.6;
+	position: relative;
+}
+
+.creators-motto::before,
+.creators-motto::after {
+	content: '"';
+	font-size: 3rem;
+	color: var(--color-primary);
+	position: absolute;
+	top: -10px;
+}
+
+.creators-motto::before {
+	left: -30px;
+}
+
+.creators-motto::after {
+	right: -30px;
+}
+
+@media (max-width: 768px) {
+	.creators-title {
+		font-size: 2rem;
+	}
+	
+	.creators-grid {
+		grid-template-columns: 1fr;
+		gap: 1.5rem;
+	}
+	
+	.creator-card {
+		padding: 1.5rem;
+	}
+	
+	.creator-avatar {
+		width: 100px;
+		height: 100px;
+	}
+	
+	.creator-initial-overlay {
+		font-size: 2rem;
+	}
+	
+	.placeholder-avatar .creator-initial {
+		font-size: 2.5rem;
+	}
+	
+	.photo-coming-soon {
+		font-size: 0.7rem;
+		bottom: 6px;
+	}
+	
+	.creators-motto::before,
+	.creators-motto::after {
+		display: none;
+	}
+}
+
 @media (max-width: 768px) {
   .language-selector {
     gap: 0.25rem;

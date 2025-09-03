@@ -32,6 +32,14 @@ const translations = {
         featured_title: "Destacados",
         featured_subtitle: "Una muestra de lo que encontrarás en la comunidad.",
 
+        // Creators section
+        creators_title: 'Ideado y Creado por',
+        creators_role1: 'Visionario del Proyecto',
+        creators_role2: 'Desarrollo & Diseño',
+        creators_role3: 'Arquitectura & Comunidad',
+        creators_motto: 'Unidos por el amor hacia los pitbulls y la construcción de una comunidad responsable',
+        creators_photo_soon: 'Foto próximamente',
+
         // Pitbulls page
         pitbulls_title: 'Explorador de Pitbulls',
         pitbulls_subtitle: 'Filtra y encuentra perros para adopción o educación. Datos de ejemplo.',
@@ -157,6 +165,14 @@ const translations = {
         // Featured section
         featured_title: "Featured",
         featured_subtitle: "A sample of what you'll find in the community.",
+
+        // Creators section
+        creators_title: 'Conceived and Created by',
+        creators_role1: 'Project Visionary',
+        creators_role2: 'Development & Design',
+        creators_role3: 'Architecture & Community',
+        creators_motto: 'United by love for pitbulls and building a responsible community',
+        creators_photo_soon: 'Photo coming soon',
 
         // Pitbulls page
         pitbulls_title: 'Pitbull Explorer',
@@ -284,6 +300,14 @@ const translations = {
         featured_title: "Empfohlen",
         featured_subtitle: "Eine Auswahl dessen, was Sie in der Gemeinschaft finden werden.",
 
+        // Creators section
+        creators_title: 'Konzipiert und Erstellt von',
+        creators_role1: 'Projekt-Visionär',
+        creators_role2: 'Entwicklung & Design',
+        creators_role3: 'Architektur & Gemeinschaft',
+        creators_motto: 'Vereint durch die Liebe zu Pitbulls und den Aufbau einer verantwortlichen Gemeinschaft',
+        creators_photo_soon: 'Foto kommt bald',
+
         // Pitbulls page
         pitbulls_title: 'Pitbull-Explorer',
         pitbulls_subtitle: 'Filtern und finden Sie Hunde für Adoption oder Bildung. Beispieldaten.',
@@ -409,6 +433,14 @@ const translations = {
         // Featured section
         featured_title: "精选",
         featured_subtitle: "社区中你会发现的内容样本。",
+
+        // Creators section
+        creators_title: '構思與創造者',
+        creators_role1: '項目願景師',
+        creators_role2: '開發與設計',
+        creators_role3: '架構與社區',
+        creators_motto: '因對比特犬的愛和建立負責任社區而團結',
+        creators_photo_soon: '照片即將推出',
 
         // Pitbulls page
         pitbulls_title: '比特犬探索器',
