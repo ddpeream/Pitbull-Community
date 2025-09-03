@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Lugares - López de Mesa</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .lugar { border: 1px solid #ccc; padding: 10px; margin: 10px 0; }
+        .lopez { background-color: #ffeb3b; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1>Test: Verificación de Lugares</h1>
+    <div id="info"></div>
+    <div id="lugares"></div>
+
+    <script>
+        async function testLugares() {
+            try {
+                const response = await fetch('./data/lugares.json?v=' + Date.now());
+                const lugares = await response.json();
+                
+                document.getElementById('info').innerHTML = `
+                    <p><strong>Total lugares cargados:</strong> ${lugares.length}</p>
+                    <p><strong>Timestamp:</strong> ${new Date().toLocaleString()}</p>
+                `;
+
+                const lugaresHTML = lugares.map(lugar => {
+                    const isLopez = lugar.nombre.toLowerCase().includes('lópez') || lugar.nombre.toLowerCase().includes('lopez');
+                    return `
+                        <div class="lugar ${isLopez ? 'lopez' : ''}">
+                            <strong>ID ${lugar.id}:</strong> ${lugar.nombre}<br>
+                            <em>${lugar.tipo} · ${lugar.ciudad}</em><br>
+                            <small>Lat: ${lugar.lat}, Lng: ${lugar.lng}</small><br>
+                            <small>${lugar.descripcion}</small>
+                        </div>
+                    `;
+                }).join('');
+
+                document.getElementById('lugares').innerHTML = lugaresHTML;
+
+                // Test búsqueda
+                console.log('=== TEST DE BÚSQUEDA ===');
+                console.log('Total lugares:', lugares.length);
+                
+                const testQueries = ['lopez', 'López', 'Mesa', 'lineal'];
+                testQueries.forEach(query => {
+                    const results = lugares.filter(l => 
+                        `${l.nombre} ${l.ciudad} ${l.tipo}`.toLowerCase().includes(query.toLowerCase())
+                    );
+                    console.log(`Búsqueda "${query}": ${results.length} resultados`, results.map(r => r.nombre));
+                });
+
+            } catch (error) {
+                console.error('Error:', error);
+                document.getElementById('info').innerHTML = `<p style="color: red;">Error: ${error.message}</p>`;
+            }
+        }
+
+        testLugares();
+    </script>
+</body>
+</html>

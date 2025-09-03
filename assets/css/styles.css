@@ -39,6 +39,20 @@ body { background: radial-gradient(1200px 800px at 10% -10%, rgba(14,165,233,.18
 .card p { margin: 0; color: var(--muted); }
 .card h2, .card h4, .card h5, .card h6, .card span, .card div { color: var(--text); }
 
+/* Tags styling */
+.tags { margin: 0.5rem 0; }
+.tag { 
+	display: inline-block; 
+	background: color-mix(in oklab, var(--brand) 15%, transparent); 
+	color: var(--brand); 
+	padding: 0.25rem 0.5rem; 
+	border-radius: 999px; 
+	font-size: 0.75rem; 
+	font-weight: 500; 
+	margin-right: 0.375rem;
+	margin-bottom: 0.25rem;
+}
+
 .section-head { display: flex; align-items: end; justify-content: space-between; gap: 1rem; margin-bottom: .25rem; }
 .featured { display: grid; gap: 2rem; }
 

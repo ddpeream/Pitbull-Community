@@ -6,8 +6,37 @@
 	const debounce = (fn, wait = 200) => { let t; return (...a) => { clearTimeout(t); t = setTimeout(() => fn(...a), wait); }; };
 
 	async function getLugares() {
-		const k = "lugares";
-		try { const c = sessionStorage.getItem(k); if (c) return JSON.parse(c); const r = await fetch("./data/lugares.json"); const d = await r.json(); sessionStorage.setItem(k, JSON.stringify(d)); return d; } catch { return []; }
+		try { 
+			// Clear ALL storage
+			sessionStorage.clear();
+			localStorage.clear();
+			
+			const timestamp = Date.now();
+			console.log("🔄 Cargando lugares con timestamp:", timestamp);
+			
+			const r = await fetch("./data/lugares.json?v=" + timestamp, {
+				cache: 'no-cache',
+				headers: {
+					'Cache-Control': 'no-cache',
+					'Pragma': 'no-cache'
+				}
+			}); 
+			
+			if (!r.ok) throw new Error(`HTTP ${r.status}: ${r.statusText}`);
+			
+			const d = await r.json(); 
+			console.log("✅ Lugares cargados exitosamente:", d.length);
+			console.log("📍 Lista completa:", d.map((l, i) => `${i+1}. ${l.nombre} (ID: ${l.id})`));
+			
+			const lopez = d.filter(l => l.nombre.toLowerCase().includes('lópez') || l.nombre.toLowerCase().includes('lopez'));
+			console.log("🔍 Parques López encontrados:", lopez.length);
+			lopez.forEach(l => console.log(`   ✓ ${l.nombre} (ID: ${l.id})`));
+			
+			return d; 
+		} catch (e) { 
+			console.error("❌ Error cargando lugares:", e); 
+			return []; 
+		}
 	}
 
 	function item(l) {
@@ -51,12 +80,22 @@
 
 			function apply() {
 				const f = readFilters();
+				console.log("Filtros aplicados:", f);
+				console.log("Total lugares disponibles:", all.length);
 				current = all.filter(l => {
-					if (f.q) { const hay = `${l.nombre} ${l.ciudad} ${l.tipo}`.toLowerCase(); if (!hay.includes(f.q)) return false; }
+					if (f.q) { 
+						const hay = `${l.nombre} ${l.ciudad} ${l.tipo}`.toLowerCase(); 
+						const match = hay.includes(f.q);
+						if (f.q.includes('lopez') || f.q.includes('López')) {
+							console.log(`Comparando "${hay}" con "${f.q}": ${match}`);
+						}
+						if (!match) return false; 
+					}
 					if (f.tipo && l.tipo !== f.tipo) return false;
 					if (f.ciudad && l.ciudad !== f.ciudad) return false;
 					return true;
 				});
+				console.log("Lugares después del filtro:", current.length);
 				list.innerHTML = current.map(item).join("");
 				empty.hidden = current.length > 0;
 				bindListClicks();

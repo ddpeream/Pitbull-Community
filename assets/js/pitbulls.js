@@ -40,7 +40,7 @@
 
 	function cardDog(d) {
 		const translate = window.t || ((key) => key);
-		const tags = (d.etiquetas||[]).slice(0,3).map(t => `<span class="tag">${t}</span>`).join("");
+		const tags = (d.etiquetas||[]).slice(0,3).map(t => `<span class="tag">${t}</span>`).join(" ");
 		return `
 		<article class="card dog" role="listitem">
 			<img src="${d.foto||"https://picsum.photos/seed/dog"+d.id+"/640/420"}" alt="${d.nombre}" loading="lazy" width="640" height="420">
