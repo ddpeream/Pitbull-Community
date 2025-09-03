@@ -13,6 +13,5 @@
 	{ "id": 12, "nombre": "Vet Bello Centro", "lat": 6.334, "lng": -75.556, "tipo": "vet", "ciudad": "Bello", "descripcion": "Buena atención." },
 	{ "id": 13, "nombre": "Parque Ciudad del Río", "lat": 6.227, "lng": -75.574, "tipo": "parque", "ciudad": "Medellín", "descripcion": "Espacios abiertos." },
 	{ "id": 14, "nombre": "Pet Shop Itagüí", "lat": 6.173, "lng": -75.606, "tipo": "tienda", "ciudad": "Itagüí", "descripcion": "Juguetes y alimentos." },
-	{ "id": 15, "nombre": "Parque Lineal López de Mesa", "lat": 6.234, "lng": -75.606, "tipo": "parque", "ciudad": "Medellín", "descripcion": "Sendero verde ideal para caminatas con mascotas, con áreas de descanso y sombra." },
-	{ "id": 16, "nombre": "Test Lugar López", "lat": 6.235, "lng": -75.607, "tipo": "parque", "ciudad": "Medellín", "descripcion": "Lugar de prueba para verificar que aparece." }
+	{ "id": 15, "nombre": "Parque Lineal López de Mesa", "lat": 6.2815, "lng": -75.6195, "tipo": "parque", "ciudad": "Medellín", "descripcion": "Sendero verde ideal para caminatas con mascotas, ubicado en el barrio Luis López de Mesa. Cuenta con áreas de descanso y sombra." }
 ]
