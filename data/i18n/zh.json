@@ -1,0 +1,70 @@
+{
+  "nav": {
+    "home": "首頁",
+    "pitbulls": "比特犬",
+    "communities": "社區", 
+    "places": "地點",
+    "gallery": "畫廊"
+  },
+  "hero": {
+    "title": "了解、關懷和負責任地收養",
+    "subtitle": "關於哥倫比亞比特犬的友善現代信息。教育、福利和帕伊薩及國際化社區。",
+    "explore": "探索比特犬",
+    "places": "查看公園和獸醫"
+  },
+  "learn": {
+    "title": "你將學到什麼？",
+    "myths": {
+      "title": "神話與事實",
+      "desc": "我們消除偏見，分享關於行為和福利的真實數據。"
+    },
+    "social": {
+      "title": "積極社會化",
+      "desc": "散步、遊戲和溫和訓練的實用工具。"
+    },
+    "health": {
+      "title": "健康與護理",
+      "desc": "疫苗、營養、運動和警告信號，以便更好地護理。"
+    }
+  },
+  "featured": {
+    "title": "精選",
+    "subtitle": "您在社區中會發現的樣本。",
+    "dogs": "狗狗",
+    "communities": "社區",
+    "places": "地點"
+  },
+  "newsletter": {
+    "title": "訂閱我們的通訊",
+    "email": {
+      "label": "電子郵件地址",
+      "placeholder": "您的@電子郵件.com"
+    },
+    "submit": "獲取更新",
+    "hint": "無垃圾郵件。您可以隨時取消訂閱。"
+  },
+  "common": {
+    "loading": "載入中...",
+    "error": "載入錯誤",
+    "no_results": "未找到結果",
+    "close": "關閉",
+    "search": "搜尋",
+    "filter": "篩選",
+    "all": "全部",
+    "city": "城市",
+    "type": "類型",
+    "age": "年齡",
+    "size": "大小",
+    "compatibility": "兼容性",
+    "status": "狀態",
+    "gender": "性別",
+    "health": "健康",
+    "notes": "備註",
+    "view_profile": "查看檔案",
+    "no_description_available": "無可用描述。",
+    "vaccines_up_to_date": "疫苗接種最新",
+    "dewormed": "已驅蟲",
+    "sterilized": "已絕育",
+    "canine_trainer_follow_up": "犬類訓練師後續追蹤"
+  }
+}

@@ -17,14 +17,20 @@
 	<header class="site-header" role="banner">
 		<div class="container header-inner">
 			<a class="brand" href="./index.html"><span class="brand-logo" aria-hidden="true">🐶</span><span class="brand-text">Pitbull Community</span></a>
+			<select id="language-selector" class="language-selector" aria-label="Seleccionar idioma">
+				<option value="es">🇪🇸 ES</option>
+				<option value="en">🇺🇸 EN</option>
+				<option value="de">🇩🇪 DE</option>
+				<option value="zh">🇹🇼 中文</option>
+			</select>
 			<button class="nav-toggle" aria-controls="nav" aria-expanded="false" aria-label="Abrir menú"><i class="ri-menu-line" aria-hidden="true"></i></button>
 			<nav id="nav" class="site-nav" role="navigation" aria-label="Principal">
 				<ul>
-					<li><a class="nav-link" href="./index.html">Inicio</a></li>
-					<li><a class="nav-link" href="./pitbulls.html">Pitbulls</a></li>
-					<li><a class="nav-link" href="./comunidades.html" aria-current="page">Comunidades</a></li>
-					<li><a class="nav-link" href="./lugares.html">Lugares</a></li>
-					<li><a class="nav-link" href="./galeria.html">Galería</a></li>
+					<li><a class="nav-link" href="./index.html" data-i18n="nav.home">Inicio</a></li>
+					<li><a class="nav-link" href="./pitbulls.html" data-i18n="nav.pitbulls">Pitbulls</a></li>
+					<li><a class="nav-link" href="./comunidades.html" data-i18n="nav.communities" aria-current="page">Comunidades</a></li>
+					<li><a class="nav-link" href="./lugares.html" data-i18n="nav.places">Lugares</a></li>
+					<li><a class="nav-link" href="./galeria.html" data-i18n="nav.gallery">Galería</a></li>
 				</ul>
 			</nav>
 		</div>
@@ -90,8 +96,9 @@
 		</div>
 	</footer>
 
-	<script src="./assets/js/main.js" defer></script>
-	<script src="./assets/js/comunidades.js" defer></script>
+	<script src="./assets/js/i18n.js"></script>
+	<script src="./assets/js/main.js"></script>
+	<script src="./assets/js/comunidades.js"></script>
 	<script>
 		document.addEventListener("DOMContentLoaded", () => {
 			window.App && window.App.comunidades && window.App.comunidades();

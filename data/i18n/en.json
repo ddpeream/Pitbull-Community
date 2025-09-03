@@ -1,0 +1,70 @@
+{
+  "nav": {
+    "home": "Home",
+    "pitbulls": "Pitbulls",
+    "communities": "Communities", 
+    "places": "Places",
+    "gallery": "Gallery"
+  },
+  "hero": {
+    "title": "Learn, care and adopt responsibly",
+    "subtitle": "Friendly and modern information about Pitbull-type dogs in Colombia. Education, welfare and paisa & cosmopolitan community.",
+    "explore": "Explore Pitbulls",
+    "places": "See parks & vets"
+  },
+  "learn": {
+    "title": "What will you learn?",
+    "myths": {
+      "title": "Myths vs Facts",
+      "desc": "We dismantle prejudices and share real data about behavior and welfare."
+    },
+    "social": {
+      "title": "Positive socialization",
+      "desc": "Practical tools for walks, play and gentle training."
+    },
+    "health": {
+      "title": "Health and care",
+      "desc": "Vaccines, nutrition, exercise and warning signs to better care."
+    }
+  },
+  "featured": {
+    "title": "Featured",
+    "subtitle": "A sample of what you'll find in the community.",
+    "dogs": "Dogs",
+    "communities": "Communities",
+    "places": "Places"
+  },
+  "newsletter": {
+    "title": "Subscribe to our newsletter",
+    "email": {
+      "label": "Email address",
+      "placeholder": "your@email.com"
+    },
+    "submit": "Get updates",
+    "hint": "No spam. You can unsubscribe at any time."
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Loading error",
+    "no_results": "No results found",
+    "close": "Close",
+    "search": "Search",
+    "filter": "Filter",
+    "all": "All",
+    "city": "City",
+    "type": "Type",
+    "age": "Age",
+    "size": "Size",
+    "compatibility": "Compatibility",
+    "status": "Status",
+    "gender": "Gender",
+    "health": "Health",
+    "notes": "Notes",
+    "view_profile": "View profile",
+    "no_description_available": "Description not available.",
+    "vaccines_up_to_date": "Vaccines up to date",
+    "dewormed": "Dewormed",
+    "sterilized": "Sterilized",
+    "canine_trainer_follow_up": "canine trainer follow-up"
+  }
+}

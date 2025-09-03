@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Traductor</title>
+</head>
+<body>
+    <h1>Test del Sistema de Traducción</h1>
+    
+    <select id="language-selector">
+        <option value="es">🇪🇸 ES</option>
+        <option value="en">🇺🇸 EN</option>
+        <option value="de">🇩🇪 DE</option>
+        <option value="zh">🇹🇼 中文</option>
+    </select>
+
+    <h2 data-i18n="nav.home">Inicio</h2>
+    <p data-i18n="hero.title">Conoce, cuida y adopta responsablemente</p>
+    <p data-i18n="hero.subtitle">Información amable y moderna sobre perros tipo Pitbull en Colombia.</p>
+
+    <script src="./assets/js/i18n.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", async () => {
+            console.log('🧪 Test page loaded');
+            console.log('🧪 i18n available:', !!window.i18n);
+            
+            if (window.i18n) {
+                await window.i18n.init();
+                console.log('🧪 i18n initialized');
+                
+                // Test translation directly
+                const testTranslation = window.i18n.t('nav.home');
+                console.log('🧪 Direct translation test:', testTranslation);
+            }
+        });
+    </script>
+</body>
+</html>

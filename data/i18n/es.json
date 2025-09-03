@@ -1,0 +1,70 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "pitbulls": "Pitbulls",
+    "communities": "Comunidades", 
+    "places": "Lugares",
+    "gallery": "Galería"
+  },
+  "hero": {
+    "title": "Conoce, cuida y adopta responsablemente",
+    "subtitle": "Información amable y moderna sobre perros tipo Pitbull en Colombia. Educación, bienestar y comunidad paisa y cosmopolita.",
+    "explore": "Explorar Pitbulls",
+    "places": "Ver parches y vets"
+  },
+  "learn": {
+    "title": "¿Qué aprenderás?",
+    "myths": {
+      "title": "Mitos vs Hechos",
+      "desc": "Desmontamos prejuicios y compartimos datos reales sobre comportamiento y bienestar."
+    },
+    "social": {
+      "title": "Socialización positiva",
+      "desc": "Herramientas prácticas para paseos, juego y entrenamiento amable."
+    },
+    "health": {
+      "title": "Salud y cuidados",
+      "desc": "Vacunas, nutrición, ejercicio y señales de alerta para cuidar mejor."
+    }
+  },
+  "featured": {
+    "title": "Destacados",
+    "subtitle": "Una muestra de lo que encontrarás en la comunidad.",
+    "dogs": "Perros",
+    "communities": "Comunidades",
+    "places": "Lugares"
+  },
+  "newsletter": {
+    "title": "Suscríbete a nuestro boletín",
+    "email": {
+      "label": "Correo electrónico",
+      "placeholder": "tu@correo.com"
+    },
+    "submit": "Quiero recibir novedades",
+    "hint": "Sin spam. Puedes darte de baja en cualquier momento."
+  },
+  "common": {
+    "loading": "Cargando...",
+    "error": "Error al cargar",
+    "no_results": "No se encontraron resultados",
+    "close": "Cerrar",
+    "search": "Buscar",
+    "filter": "Filtrar",
+    "all": "Todos",
+    "city": "Ciudad",
+    "type": "Tipo",
+    "age": "Edad",
+    "size": "Tamaño",
+    "compatibility": "Compatibilidad",
+    "status": "Estado",
+    "gender": "Sexo",
+    "health": "Salud",
+    "notes": "Notas",
+    "view_profile": "Ver ficha",
+    "no_description_available": "Descripción no disponible.",
+    "vaccines_up_to_date": "Vacunas al día",
+    "dewormed": "Desparasitado",
+    "sterilized": "Esterilizado",
+    "canine_trainer_follow_up": "seguimiento con educador canino"
+  }
+}

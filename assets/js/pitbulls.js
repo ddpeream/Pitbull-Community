@@ -39,6 +39,7 @@
 	}
 
 	function cardDog(d) {
+		const t = window.i18n ? (key) => window.i18n.t(`common.${key}`) : (key) => key;
 		const tags = (d.etiquetas||[]).slice(0,3).map(t => `<span class="tag">${t}</span>`).join("");
 		return `
 		<article class="card dog" role="listitem">
@@ -47,12 +48,13 @@
 				<h3>${d.nombre}</h3>
 				<p class="muted">${d.ciudad || ""} · ${d.edad||""} · ${d.sexo||""} · ${d.tamano||""}</p>
 				<div class="tags">${tags}</div>
-				<div class="actions"><button class="btn btn-ghost" data-id="${d.id}" data-open-ficha type="button">Ver ficha</button></div>
+				<div class="actions"><button class="btn btn-ghost" data-id="${d.id}" data-open-ficha type="button">${t('view_profile')}</button></div>
 			</div>
 		</article>`;
 	}
 
 	function fichaHTML(d) {
+		const t = window.i18n ? (key) => window.i18n.t(`common.${key}`) : (key) => key;
 		return `
 			<div class="ficha">
 				<div class="ficha-media"><img src="${d.foto||"https://picsum.photos/seed/dog"+d.id+"/960/640"}" alt="${d.nombre}"></div>
@@ -60,19 +62,19 @@
 					<h3>${d.nombre}</h3>
 					<p class="muted">${d.ciudad||""}</p>
 					<ul class="meta">
-						<li><strong>Edad:</strong> ${d.edad||""}</li>
-						<li><strong>Sexo:</strong> ${d.sexo||""}</li>
-						<li><strong>Tamaño:</strong> ${d.tamano||""}</li>
-						<li><strong>Compatibilidad:</strong> ${(d.compatibilidad||[]).join(", ")}</li>
+						<li><strong>${t('age')}:</strong> ${d.edad||""}</li>
+						<li><strong>${t('gender')}:</strong> ${d.sexo||""}</li>
+						<li><strong>${t('size')}:</strong> ${d.tamano||""}</li>
+						<li><strong>${t('compatibility')}:</strong> ${(d.compatibilidad||[]).join(", ")}</li>
 					</ul>
-					<p>${d.descripcion||"Descripción no disponible."}</p>
-					<h4>Salud</h4>
+					<p>${d.descripcion||t('no_description_available')}</p>
+					<h4>${t('health')}</h4>
 					<ul class="meta">
-						<li>Vacunas al día (placeholder)</li>
-						<li>Desparasitado (placeholder)</li>
-						<li>Esterilizado (placeholder)</li>
+						<li>${t('vaccines_up_to_date')} (placeholder)</li>
+						<li>${t('dewormed')} (placeholder)</li>
+						<li>${t('sterilized')} (placeholder)</li>
 					</ul>
-					<p class="muted">Notas: seguimiento con educador canino (placeholder).</p>
+					<p class="muted">${t('notes')}: ${t('canine_trainer_follow_up')} (placeholder).</p>
 				</div>
 			</div>`;
 	}
@@ -101,20 +103,23 @@
 		};
 	}
 
-	window.App = Object.assign(window.App || {}, {
-		async pitbulls() {
-			// common
-			(window.App.index||function(){})(); // reuse header behaviors
+  window.App = Object.assign(window.App || {}, {
+    async pitbulls() {
+      // Initialize i18n first
+      if (window.i18n) {
+        await window.i18n.init();
+      }
+      
+      // common
+      (window.App.index||function(){})(); // reuse header behaviors
 
-			const container = qs("#resultados");
-			const btnMas = qs("#cargar-mas");
-			const empty = qs("#sin-resultados");
-			const modal = setupModal();
-			const all = await getDogs();
-			let filtered = [];
-			let page = 0; const pageSize = 9;
-
-			function renderPage(reset = false) {
+      const container = qs("#resultados");
+      const btnMas = qs("#cargar-mas");
+      const empty = qs("#sin-resultados");
+      const modal = setupModal();
+      const all = await getDogs();
+      let filtered = [];
+      let page = 0; const pageSize = 9;			function renderPage(reset = false) {
 				if (reset) { container.innerHTML = ""; page = 0; }
 				const start = page * pageSize;
 				const slice = filtered.slice(start, start + pageSize);

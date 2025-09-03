@@ -1,0 +1,70 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "pitbulls": "Pitbulls",
+    "communities": "Gemeinschaften", 
+    "places": "Orte",
+    "gallery": "Galerie"
+  },
+  "hero": {
+    "title": "Lernen, pflegen und verantwortlich adoptieren",
+    "subtitle": "Freundliche und moderne Informationen über Pitbull-Hunde in Kolumbien. Bildung, Wohlfahrt und paisa & kosmopolitische Gemeinschaft.",
+    "explore": "Pitbulls erkunden",
+    "places": "Parks & Tierärzte ansehen"
+  },
+  "learn": {
+    "title": "Was wirst du lernen?",
+    "myths": {
+      "title": "Mythen vs Fakten",
+      "desc": "Wir bauen Vorurteile ab und teilen echte Daten über Verhalten und Wohlbefinden."
+    },
+    "social": {
+      "title": "Positive Sozialisierung",
+      "desc": "Praktische Werkzeuge für Spaziergänge, Spiel und sanftes Training."
+    },
+    "health": {
+      "title": "Gesundheit und Pflege",
+      "desc": "Impfungen, Ernährung, Bewegung und Warnzeichen für bessere Pflege."
+    }
+  },
+  "featured": {
+    "title": "Empfohlen",
+    "subtitle": "Eine Probe von dem, was Sie in der Gemeinschaft finden werden.",
+    "dogs": "Hunde",
+    "communities": "Gemeinschaften",
+    "places": "Orte"
+  },
+  "newsletter": {
+    "title": "Abonnieren Sie unseren Newsletter",
+    "email": {
+      "label": "E-Mail-Adresse",
+      "placeholder": "ihre@email.de"
+    },
+    "submit": "Updates erhalten",
+    "hint": "Kein Spam. Sie können sich jederzeit abmelden."
+  },
+  "common": {
+    "loading": "Wird geladen...",
+    "error": "Ladefehler",
+    "no_results": "Keine Ergebnisse gefunden",
+    "close": "Schließen",
+    "search": "Suchen",
+    "filter": "Filtern",
+    "all": "Alle",
+    "city": "Stadt",
+    "type": "Typ",
+    "age": "Alter",
+    "size": "Größe",
+    "compatibility": "Kompatibilität",
+    "status": "Status",
+    "gender": "Geschlecht",
+    "health": "Gesundheit",
+    "notes": "Notizen",
+    "view_profile": "Profil ansehen",
+    "no_description_available": "Beschreibung nicht verfügbar.",
+    "vaccines_up_to_date": "Impfungen auf dem neuesten Stand",
+    "dewormed": "Entwurmt",
+    "sterilized": "Sterilisiert",
+    "canine_trainer_follow_up": "Hundetrainer-Nachbetreuung"
+  }
+}

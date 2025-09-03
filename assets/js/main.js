@@ -123,6 +123,16 @@
 	}
 
 	window.App = Object.assign(window.App || {}, {
-		index() { setupNav(); highlightActive(); setupTheme(); setupReveal(); setupNewsletter(); populateHomeFeatured(); footerYear(); },
+		async index() { 
+			setupNav(); 
+			highlightActive(); 
+			setupTheme(); 
+			setupReveal(); 
+			setupNewsletter(); 
+			footerYear();
+			
+			// Load featured content - i18n is handled automatically by translations.js
+			populateHomeFeatured(); 
+		},
 	});
 })();

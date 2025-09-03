@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debug Traductor</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .test-section { margin: 20px 0; padding: 20px; border: 1px solid #ccc; }
+        select { padding: 10px; margin: 10px 0; font-size: 16px; }
+        button { padding: 10px 20px; margin: 5px; }
+    </style>
+</head>
+<body>
+    <h1>Debug del Sistema de Traducción</h1>
+    
+    <div class="test-section">
+        <h2>Selector de Idioma</h2>
+        <select id="language-selector">
+            <option value="es">🇪🇸 ES</option>
+            <option value="en">🇺🇸 EN</option>
+            <option value="de">🇩🇪 DE</option>
+            <option value="zh">🇹🇼 中文</option>
+        </select>
+        <button onclick="testTranslation()">Test Manual</button>
+        <button onclick="window.i18n.updateDOM()">Forzar Actualización</button>
+    </div>
+
+    <div class="test-section">
+        <h2>Elementos de Prueba</h2>
+        <p><strong>Navegación:</strong></p>
+        <ul>
+            <li data-i18n="nav.home">Inicio</li>
+            <li data-i18n="nav.pitbulls">Pitbulls</li>
+            <li data-i18n="nav.communities">Comunidades</li>
+            <li data-i18n="nav.places">Lugares</li>
+            <li data-i18n="nav.gallery">Galería</li>
+        </ul>
+        
+        <p><strong>Héroe:</strong></p>
+        <h3 data-i18n="hero.title">Conoce, cuida y adopta responsablemente</h3>
+        <p data-i18n="hero.subtitle">Información amable y moderna sobre perros tipo Pitbull en Colombia.</p>
+        
+        <p><strong>Aprendizaje:</strong></p>
+        <h4 data-i18n="learn.title">¿Qué aprenderás?</h4>
+        <h5 data-i18n="learn.myths.title">Mitos vs Hechos</h5>
+        <p data-i18n="learn.myths.desc">Desmontamos prejuicios y compartimos datos reales sobre comportamiento y bienestar.</p>
+    </div>
+
+    <div class="test-section">
+        <h2>Estado del Sistema</h2>
+        <div id="debug-info">
+            <p>Idioma actual: <span id="current-lang">-</span></p>
+            <p>Traducciones cargadas: <span id="loaded-langs">-</span></p>
+            <p>Inicializado: <span id="initialized">-</span></p>
+        </div>
+    </div>
+
+    <script src="./assets/js/i18n.js"></script>
+    <script>
+        function updateDebugInfo() {
+            if (window.i18n) {
+                document.getElementById('current-lang').textContent = window.i18n.currentLang;
+                document.getElementById('loaded-langs').textContent = Object.keys(window.i18n.translations).join(', ');
+                document.getElementById('initialized').textContent = window.i18n.initialized;
+            }
+        }
+
+        function testTranslation() {
+            console.log('🧪 Manual test triggered');
+            if (window.i18n) {
+                console.log('Current language:', window.i18n.currentLang);
+                console.log('Available translations:', Object.keys(window.i18n.translations));
+                console.log('Test translation nav.home:', window.i18n.t('nav.home'));
+                console.log('Test translation hero.title:', window.i18n.t('hero.title'));
+                updateDebugInfo();
+                window.i18n.updateDOM();
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            console.log('🧪 Debug page loaded');
+            
+            // Update debug info every second
+            setInterval(updateDebugInfo, 1000);
+            
+            // Listen for language changes
+            window.addEventListener('languageChanged', (e) => {
+                console.log('🧪 Language changed event:', e.detail.lang);
+                updateDebugInfo();
+            });
+        });
+    </script>
+</body>
+</html>
